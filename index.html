@@ -27,7 +27,8 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand fw-bold" href="#page-top"><img src="assets/img/logo.png" alt="logo" style="height: 5rem"></a>
+            <a class="navbar-brand fw-bold" href="#page-top"><img src="assets/img/logo.png" alt="logo"
+                    style="height: 5rem"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -278,8 +279,7 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="e11c7843-d118-42c0-bf87-19e43e67526c" method="post"
-                        netlify>
+                    <form id="contactForm" action="https://api.staticforms.xyz/submit" method="post">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..."
@@ -329,6 +329,8 @@
                         <!-- Submit Button-->
                         <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg " id="submitButton"
                                 type="submit">Enviar</button></div>
+                        <input type="hidden" name="accessKey" value="949287a5-ff43-4dbe-ac51-8dbf986d2569">
+
                         <input type="hidden" name="redirectTo"
                             value="https://seuplanodesaude.netlify.app/obrigado.html">
                     </form>
