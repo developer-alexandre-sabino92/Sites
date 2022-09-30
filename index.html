@@ -34,6 +34,24 @@
   gtag('config', 'UA-239537860-1');
 </script>
 
+<!-- Event snippet for Contato - Whatsapp conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-10977153645/54RtCILK5uIDEO2kqPIo',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
+
 </head>
 
 <body id="page-top">
@@ -73,7 +91,7 @@
                         <p class="lead fw-normal text-muted mb-5">em menos de 3 minutos e tenha a oportunidade de
                             economizar até 40%!</p>
                         <div class="d-flex flex-column flex-lg-row align-items-center">
-                            <a class="btn  btn-dark btn-lg" href="https://api.whatsapp.com/send?phone=5521999418073" role="button"> Fale com Corretor</a>
+                            <button onclick="gtag_report_conversion(url)" class="btn  btn-dark btn-lg" href="https://api.whatsapp.com/send?phone=5521999418073" role="button"> Fale com Corretor</button>
                         </div>
                     </div>
                 </div>
@@ -222,7 +240,7 @@
                         profissional no ramo de plano de saúde.Seus conhecimentos já ajudaram centenas de clientes a
                         encontrar o plano de saúde ideal, com os benefícios e orçamento que cabem no bolso. Não perca
                         tempo, faça agora sua cotação! </p>
-                    <a href="https://api.whatsapp.com/send?phone=5521999418073" class="btn btn-lg btn-dark mt-3">Fale com Corretor</a>
+                    <button onclick="gtag_report_conversion(url)" href="https://api.whatsapp.com/send?phone=5521999418073" class="btn btn-lg btn-dark mt-3">Fale com Corretor</button>
                 </div>
                 <div class="col-sm-8 col-md-6">
                     <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle"
@@ -239,7 +257,7 @@
 
             <h5 class="fs-1 text-light" style=" background-color:rgba(137, 43, 226, 0.164) ;">Deseja tirar dúvidas sobre
                 plano de saúde?</h5>
-            <a class="btn btn-lg btn-dark" href="https://api.whatsapp.com/send?phone=5521999418073">Fale com Corretor</a>
+            <button onclick="gtag_report_conversion(url)" class="btn btn-lg btn-dark" href="https://api.whatsapp.com/send?phone=5521999418073">Fale com Corretor</button>
 
 
 
